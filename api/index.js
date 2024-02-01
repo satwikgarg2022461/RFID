@@ -1,7 +1,23 @@
 import express from 'express';
+import dotenv from 'dotenv';
+import morgan from 'morgan';
+import connectDB from '../.config/db.js';
+
+dotenv.config({path : 'api/../.env' });
+
+connectDB();
 
 const app=express();
 
-app.listen(3000,()=>
-    {console.log('server on port 3000')}
+app.use(express.json());
+app.use(morgan('dev'));
+
+app.get("/",(req,res) =>{
+    res.send("<h1>Welcomw to practice run</h1>")
+})
+
+const PORT = process.env.PORT;
+
+app.listen(PORT,()=>
+    {console.log(`server on port ${PORT}`)}
 );
