@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from 'flowbite-react'
+import GridComponent from './GridComponent'; 
 
 const HomePage = () => {
   return (
@@ -30,10 +31,18 @@ const HomePage = () => {
           
 
         </div>
+        
         <div className="flex justify-center items-center">
           <img className="w-96 h-96 md:w-96 md:h-auto md:ml-10" src="https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif" alt="hero" />
         </div>
+       
       </section>
+      {/* GridComponent placed below the "Why Sellers Choose Us?" heading */}
+      <div className="flex p-3 max-w-5xl mx-auto flex-col md:flex-row md:items-center gap-3">
+        <GridComponent />
+        <img className="w-96 h-96 md:w-96 md:h-auto ml-10" src="http://surl.li/qcvhf" alt="Image broken" />
+      </div>
+       
     </div>
   )
 }
