@@ -1,5 +1,5 @@
-import userModels from "../models/userModels";
-import { hashPassword } from '../helpers/helper';
+import userModel from "../models/userModels.js";
+import { hashPassword } from '../helpers/helper.js';
 
 export const registerController = async (req,res) => {
     try {
@@ -20,7 +20,7 @@ export const registerController = async (req,res) => {
             return res.send({error: 'Address is Requied'});
         }
 
-        const existingUser = await userModels.findOne({email});
+        const existingUser = await userModel.findOne({email});
 
         if(existingUser){
             return res.status(200).send({
@@ -29,21 +29,21 @@ export const registerController = async (req,res) => {
             })
         }
 
-        const hashPassword = await hashPassword(password);
+        const hashedPassword = await hashPassword(password);
 
-        const user = new userModel({name,email,phone,address,password:hashPassword}).save();
+        const user = await new userModel({name,email,phone,address,password:hashedPassword,}).save();
 
         res.status(201).send({
             success:true,
             message:'User Register Successfully',
             user
-        })
+        });
     } catch (error) {
         console.log(error);
         res.status(500).send({
             success:false,
             message: 'Error in Registration',
             error
-        })
+        });
     }
 };
