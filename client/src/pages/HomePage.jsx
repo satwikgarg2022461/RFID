@@ -2,9 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from 'flowbite-react'
 import GridComponent from './GridComponent'; 
+import Header from '../components/Header';
+import FooterComponent from '../components/Footer';
 
 const HomePage = () => {
   return (
+    <>
+    <Header/>
     <div className=' min-h-screen'>
       <div className="flex p-3 max-w-5xl mx-auto flex-col md:flex-row md:items-center gap-3">
         <div className="flex flex-col items-center md:items-start">
@@ -19,7 +23,7 @@ const HomePage = () => {
 
         </div>
         <div className="flex justify-center items-center">
-          <img className="w-96 h-96 md:w-96 md:h-auto md:ml-10" src="https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif" alt="hero" />
+          <img className="w-96 h-96 md:w-96 md:h-auto md:ml-10" src="https://imprint-e.com/wp-content/uploads/2015/07/rfid-icon-01a-400x250.jpg" alt="hero" />
         </div>
         
       </div>
@@ -33,7 +37,7 @@ const HomePage = () => {
         </div>
         
         <div className="flex justify-center items-center">
-          <img className="w-96 h-96 md:w-96 md:h-auto md:ml-10" src="https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif" alt="hero" />
+          <img className="w-96 h-96 md:w-96 md:h-auto md:ml-10" src="" alt="hero" />
         </div>
        
       </section>
@@ -44,6 +48,8 @@ const HomePage = () => {
       </div>
        
     </div>
+    <FooterComponent/>
+    </>
   )
 }
 

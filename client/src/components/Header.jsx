@@ -16,7 +16,7 @@ const Header = () => {
       </Link>
       </div>
         <div className="" >
-      <Link to={"/"}>
+      <Link to={"/sign-up"}>
           <Button gradientDuoTone={"purpleToBlue"} pill outline>
             Start Selling
           </Button>

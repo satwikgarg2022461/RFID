@@ -9,13 +9,13 @@ import FooterComponent from './components/Footer'
 const App = () => {
   return (
     <BrowserRouter>
-    <Header></Header>
+    {/* <Header></Header> */}
       <Routes>
         <Route path="/" element={<HomePage></HomePage>} />
         <Route path='/sign-in' element={<SignIn></SignIn>} />
         <Route path='/sign-up' element={<SignUp></SignUp>} />
       </Routes>
-      <FooterComponent></FooterComponent>
+      {/* <FooterComponent></FooterComponent> */}
     </BrowserRouter>
   )
 }
