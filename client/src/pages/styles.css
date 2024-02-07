@@ -1,0 +1,13 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust '200px' as needed */
+  gap: 16px; /* Adjust the gap as needed */
+  width: 100%; /* Adjust if you want a max-width or specific width */
+}
+
+.grid-item {
+  /* Styling for grid items, but do not set a fixed width here */
+  border: 1px solid #ccc;
+  padding: 16px;
+  text-align: center;
+}

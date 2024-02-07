@@ -1,0 +1,44 @@
+/* SignIn.css */
+.flex {
+    display: flex;
+  }
+  
+  .justify-between {
+    justify-content: space-between;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .h-screen {
+    height: 100vh;
+  }
+  
+  .bg-gray-100 {
+    background-color: #f7fafc;
+  }
+  
+  .w-half {
+    width: 50%;
+  }
+  
+  
+  .p-10 {
+    padding: 2.5rem;
+  }
+  
+  .shadow-xl {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  
+  .object-cover {
+    object-fit: cover;
+  }
+  
+  /* Add other styles for input, button, etc., as needed */
+  
