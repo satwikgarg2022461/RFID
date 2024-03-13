@@ -1,38 +1,36 @@
 // GridComponent.jsx
 import React from 'react';
 
-// Custom CSS class for the square boxes with updated background color and centered text
-const squareBoxStyle = {
-  width: '100px',  // Square box side length
-  height: '100px', // Square box side length
-  padding: '10px', // Padding inside the box
-  border: '1px solid black', // Border for the box
-  margin: '10px', // Margin around the box
-  backgroundColor: 'blue', // Change the background color to blue
-  display: 'flex', // Use flexbox for centering
-  justifyContent: 'center', // Center horizontally
-  alignItems: 'center', // Center vertically
-  listStyle: 'none', // Removes default list styling when using <li>
-};
-
 const GridComponent = () => {
   return (
-    <div className="grid grid-cols-2 gap-4 justify-start"> {/* This ensures the grid is left-aligned */}
-      <div style={squareBoxStyle}>
-        <h2> "lorem"</h2>
-        <p>Bullet 1</p>
+    <div className="grid grid-cols-2 gap-4">
+      <div className="flex items-center space-x-4">
+        <span className="icon">👥</span>
+        <div>
+          <h3 className="text-lg font-semibold">Crores of Customers</h3>
+          <p>Mission to integrate in every Retail store in India.</p>
+        </div>
       </div>
-      <div style={squareBoxStyle}>
-        <h2> "lorem"</h2>
-        <p>Bullet 2</p>
+      <div className="flex items-center space-x-4">
+        <span className="icon">💼</span>
+        <div>
+          <h3 className="text-lg font-semibold">Ease of Doing Business</h3>
+          <p>Easy to integrate software.</p>
+        </div>
       </div>
-      <div style={squareBoxStyle}>
-        <h2> "lorem"</h2>
-        <p>Bullet 3</p>
+      <div className="flex items-center space-x-4">
+        <span className="icon">📈</span>
+        <div>
+          <h3 className="text-lg font-semibold">Growth</h3>
+          <p>Minimal software access as compared to competitors.</p>
+        </div>
       </div>
-      <div style={squareBoxStyle}>
-        <h2> "lorem"</h2>
-        <p>Bullet 4</p>
+      <div className="flex items-center space-x-4">
+        <span className="icon">🔒</span>
+        <div>
+          <h3 className="text-lg font-semibold">Secure Payments</h3>
+          <p>Extra secure back-end services.</p>
+        </div>
       </div>
     </div>
   );

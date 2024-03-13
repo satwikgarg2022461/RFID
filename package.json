@@ -13,6 +13,7 @@
   "author": "Saurav Haldar",
   "license": "MIT",
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
     "bcrypt": "^5.1.1",
     "colors": "^1.4.0",
     "dotenv": "^16.4.1",
