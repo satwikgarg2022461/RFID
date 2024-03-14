@@ -15,7 +15,7 @@ const Header = () => {
         </Link>
         <div className="flex"> {/* Flex container for buttons */}
           {/* Start Selling Button */}
-          <Link to={"/"}>
+          <Link to={"/sign-up"}>
             <Button gradientDuoTone={"purpleToBlue"} pill outline>
               Start Selling
             </Button>

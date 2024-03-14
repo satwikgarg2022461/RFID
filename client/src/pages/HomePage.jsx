@@ -17,7 +17,7 @@ const HomePage = () => {
           <h2 className="text-lg text-gray-600 dark:text-gray-300 md:text-2xl">
             Start selling your RFID products
           </h2>
-          <Link to={"/"}>
+          <Link to={"/sign-up"}>
             <Button className="mt-5" gradientDuoTone={"purpleToBlue"} pill>
               Start Selling
             </Button>
@@ -155,7 +155,7 @@ const HomePage = () => {
             adfadhsaukdsakjdsasa dsadsaddsdas dhjsdjhsadhjasdjsdjhsabdjhsds
            
           </h2>
-          <Link to={"/"}>
+          <Link to={"/sign-up"}>
             <Button className="mt-5" gradientDuoTone={"purpleToBlue"} pill>
               Start Selling
             </Button>

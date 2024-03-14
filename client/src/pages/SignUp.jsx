@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const SignUp = () => {
+const  SignUp = () => {
   const [fullName, setFullName] = useState("");
   const [shopName, setShopName] = useState("");
   const [address, setAddress] = useState("");
@@ -13,8 +13,8 @@ const SignUp = () => {
   const [emailId, setEmailId] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = async(e) => {
+    e.preventDefault();
 
     // Submit the data to your backend here
     console.log("Form submitted:", {
@@ -27,6 +27,18 @@ const SignUp = () => {
       emailId,
       password,
     });
+
+    try {
+      console.log(fullName);
+      // const response = { fullName,shopName,address,pincode,gstNumber,contactNumber,emailId,password };
+      const response =  await fetch('/api/v1/auth/register', { fullName,shopName,address,pincode,gstNumber,contactNumber,emailId,password });
+      // console.log(fullName)
+      console.log(response);
+      console.log(response.data);
+      // navigate('/result');
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -48,7 +60,10 @@ const SignUp = () => {
       <div className="create-account">
         <div className="container-signup">
           <div className="image-container">
-            <img src="https://imprint-e.com/wp-content/uploads/2015/07/rfid-icon-01a-400x250.jpg" alt="Company Logo" />
+            <img
+              src="https://imprint-e.com/wp-content/uploads/2015/07/rfid-icon-01a-400x250.jpg"
+              alt="Company Logo"
+            />
           </div>
           <div className="form-container">
             <h1>Create Account</h1>
@@ -125,7 +140,7 @@ const SignUp = () => {
                   required
                 />
               </label>
-              <Button gradientDuoTone={"purpleToBlue"} pill outline>
+              <Button gradientDuoTone={"purpleToBlue"} pill outline onClick={handleSubmit}>
                 Register
               </Button>
             </form>
