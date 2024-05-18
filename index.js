@@ -15,9 +15,14 @@ const app=express();
 app.use(express.json());
 app.use(morgan('dev'));
 
+app.use(cors({
+    origin: 'http://localhost:5173' // allow only this origin
+}));
+
+
 app.use('/api/v1/auth',authRoutes)
 
-app.use(cors());
+
 app.get("/",(req,res) =>{
     res.send("<h1>Welcomw to practice run</h1>")
 })

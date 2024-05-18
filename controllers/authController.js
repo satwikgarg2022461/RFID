@@ -9,6 +9,7 @@ export const registerController = async (req,res) => {
         
         console.log(req.body);
         // const {name,email,password,phone,address} = req.body;
+        // console.log();
         // if(!name){
         //     return res.send({error: 'Name is Requied'});
         // }

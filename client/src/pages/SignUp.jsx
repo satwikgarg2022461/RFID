@@ -15,7 +15,16 @@ const  SignUp = () => {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-
+    const formData = {
+      fullName,
+      shopName,
+      address,
+      pincode,
+      gstNumber,
+      contactNumber,
+      emailId,
+      password,
+    };
     // Submit the data to your backend here
     console.log("Form submitted:", {
       fullName,
@@ -31,8 +40,14 @@ const  SignUp = () => {
     try {
       console.log(fullName);
       // const response = { fullName,shopName,address,pincode,gstNumber,contactNumber,emailId,password };
-      const response =  await fetch('/api/v1/auth/register', { fullName,shopName,address,pincode,gstNumber,contactNumber,emailId,password });
-      // console.log(fullName)
+      const response = await fetch('http://localhost:8080/api/v1/auth/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      console.log(fullName);
       console.log(response);
       console.log(response.data);
       // navigate('/result');
