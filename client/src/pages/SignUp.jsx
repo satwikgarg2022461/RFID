@@ -2,6 +2,7 @@ import { Navbar, Button } from "flowbite-react";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const  SignUp = () => {
   const [fullName, setFullName] = useState("");
@@ -13,6 +14,7 @@ const  SignUp = () => {
   const [emailId, setEmailId] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate();
   const handleSubmit = async(e) => {
     e.preventDefault();
     const formData = {
@@ -38,8 +40,6 @@ const  SignUp = () => {
     });
 
     try {
-      console.log(fullName);
-      // const response = { fullName,shopName,address,pincode,gstNumber,contactNumber,emailId,password };
       const response = await fetch('http://localhost:8080/api/v1/auth/register', {
         method: 'POST',
         headers: {
@@ -47,10 +47,22 @@ const  SignUp = () => {
         },
         body: JSON.stringify(formData),
       });
-      console.log(fullName);
-      console.log(response);
-      console.log(response.data);
-      // navigate('/result');
+    
+      const data = await response.json();
+      if(response.status === 201){
+        console.log(data.user);
+        console.log(data.message);
+        navigate('/');
+      }
+      if(response.status === 200){
+        console.log(data.message);
+        navigate('/login');
+      }
+      if(response.status === 500){
+        console.log(data.message);
+        console.log(data.error);
+        navigate('/');
+      }
     } catch (error) {
       console.error(error);
     }
