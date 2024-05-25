@@ -6,6 +6,7 @@ import SignUp from './pages/SignUp'
 import Contributors from './pages/Contributors'
 import RolePage from './pages/RolePage'
 import WorkerLogin from './pages/WorkerSignIn'
+import Dashboard from './pages/Dashboard'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/seller/sign-in' element={<SignIn />} />
         <Route path='/worker/sign-in' element={<WorkerLogin />} />
         <Route path='/sign-up' element={<SignUp />} />
+        <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/contributors' element={<Contributors />} />
         
 
