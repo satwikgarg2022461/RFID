@@ -6,6 +6,7 @@ import SignUp from './pages/SignUp'
 import Header from './components/Header'
 import FooterComponent from './components/Footer'
 import Contributors from './pages/Contributors'
+import RolePage from './pages/RolePage'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       {/* <Header /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/role" element={<RolePage />} />
         <Route path='/sign-in' element={<SignIn />} />
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/contributors' element={<Contributors />} />
