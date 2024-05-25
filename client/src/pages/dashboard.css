@@ -1,0 +1,112 @@
+.dashboard-container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-menu li {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header h1 {
+    margin: 0;
+  }
+  
+  .header input {
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .stat-item {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  
+  .stat-item span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .analytics,
+  .top-selling,
+  .recent-orders {
+    margin: 20px 0;
+  }
+  
+  .chart {
+    background-color: #e0e0e0;
+    height: 300px;
+    border-radius: 5px;
+  }
+  
+  .product-placeholder {
+    background-color: #e0e0e0;
+    height: 150px;
+    border-radius: 5px;
+  }
+  
+  .recent-orders table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .recent-orders th, .recent-orders td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .recent-orders th {
+    background-color: #f2f2f2;
+  }
+  
+  .paid {
+    color: green;
+  }
+  
+  .cancel {
+    color: red;
+  }
+  
+  .processing {
+    color: blue;
+  }
+  
