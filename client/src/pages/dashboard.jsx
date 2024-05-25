@@ -1,50 +1,63 @@
-import React from 'react';
-import './dashboard.css';
+import React from "react";
+import "./dashboard.css";
+import FooterComponent from './../components/Footer';
+import Sidebar from './../components/Sidebar';
 
-const dashboard = () => {
+const Dashboard = () => {
   return (
+    <div>
     <div className="dashboard-container">
-      <aside className="sidebar">
-        <div className="logo">LOGO</div>
-        <nav className="nav-menu">
-          <ul>
-            <li>Dashboard</li>
-            <li>Add Worker</li>
-            <li>Remove Worker</li>
-            <li>View Worker</li>
-            <li>Inventory</li>
-            <li>Payment</li>
-            <li>Customer</li>
-            <li>Revenue</li>
-            <li>Setting</li>
-          </ul>
-        </nav>
-      </aside>
+        <Sidebar></Sidebar>
       <main className="main-content">
         <header className="header">
-          <h1>Overview</h1>
-          <input type="text" placeholder="search" />
+          <h1 className="heading">Overview</h1>
+          <div className="search-bar">
+            <span className="material-symbols-outlined">search</span>
+            <input type="text" placeholder="search" />
+          </div>
         </header>
         <section className="stats">
-          <div className="stat-item">Total Orders<br/><span>1000</span></div>
-          <div className="stat-item">Total Sale<br/><span>500</span></div>
-          <div className="stat-item">Total User<br/><span>1500</span></div>
-          <div className="stat-item">Total Product<br/><span>2500</span></div>
-        </section>
-        <section className="analytics">
-          <h2>Sales Analytics</h2>
-          <div className="chart">
-            {/* Placeholder for chart */}
+          <div className="stat-items">
+            <div className="stat-item">
+              <span className="material-symbols-outlined">shopping_cart</span>
+              Total Orders
+              <br />
+              <span>1000</span>
+            </div>
+            <div className="stat-item">
+              <span className="material-symbols-outlined">attach_money</span>
+              Total Sale
+              <br />
+              <span>500</span>
+            </div>
+            <div className="stat-item">
+              <span className="material-symbols-outlined">people</span>
+              Total User
+              <br />
+              <span>1500</span>
+            </div>
+            <div className="stat-item">
+              <span className="material-symbols-outlined">inventory_2</span>
+              Total Product
+              <br />
+              <span>2500</span>
+            </div>
           </div>
         </section>
-        <section className="top-selling">
-          <h2>Top selling product</h2>
-          <div className="product-placeholder">
-            {/* Placeholder for top selling product */}
-          </div>
-        </section>
+        <div className="content-wrapper">
+          <section className="analytics">
+            <h2 className="heading">Sales Analytics</h2>
+            <div className="chart">{/* Placeholder for chart */}</div>
+          </section>
+          <section className="top-selling">
+            <h2 className="heading">Top selling product</h2>
+            <div className="product-placeholder">
+              {/* Placeholder for top selling product */}
+            </div>
+          </section>
+        </div>
         <section className="recent-orders">
-          <h2>Recent Orders</h2>
+          <h2 className="heading">Recent Orders</h2>
           <table>
             <thead>
               <tr>
@@ -84,7 +97,9 @@ const dashboard = () => {
         </section>
       </main>
     </div>
+      <FooterComponent></FooterComponent>
+    </div>
   );
 };
 
-export default dashboard;
+export default Dashboard;
