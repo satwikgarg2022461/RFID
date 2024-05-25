@@ -187,7 +187,6 @@ const HomePage = () => {
       {/* End of Stepper Component */}
 
       <section className="flex p-3 max-w-5xl mx-auto flex-col md:flex-row md:items-center gap-3  min-h-96">
-<<<<<<< HEAD
         <div className="flex p-3 max-w-5xl mx-auto flex-col md:flex-row md:items-center gap-3">
           <div className="flex flex-col items-center md:items-start md:flex-grow">
             <h1 className="text-xl font-bold text-gray-800 dark:text-white md:text-5xl">
@@ -209,7 +208,7 @@ const HomePage = () => {
               alt="RFID"
             />
           </div>
-=======
+          </div>
       <div className="flex p-3 max-w-5xl mx-auto flex-col md:flex-row md:items-center gap-3">
         <div className="flex flex-col items-center md:items-start md:flex-grow">
           <h1 className="text-xl font-bold text-gray-800 dark:text-white md:text-5xl">
@@ -224,8 +223,8 @@ const HomePage = () => {
               Start Selling
             </Button>
           </Link>
->>>>>>> 74ede3b25f15e9fb5026e65253e82488b209da1b
         </div>
+      </div>
       </section>
       <FooterComponent></FooterComponent>
     </div>
