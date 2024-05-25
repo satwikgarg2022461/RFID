@@ -3,14 +3,38 @@ import { useNavigate } from 'react-router-dom';
 import './SignIn.css'; // Make sure you have the CSS file for styles
 
 const SignIn = () => {
-  const [emailOrPhone, setEmailOrPhone] = useState('');
+  const [emailId, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async(event) => {
     event.preventDefault();
-    // Here you would handle the login logic
-    navigate('/'); // Redirect to home page or dashboard after login
+    console.log("mew");
+    const formData={
+      emailId,
+      password
+    };
+
+    try {
+      const response = await fetch('http://localhost:8080/api/v1/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+    
+      const data = await response.json();
+      if(response.status === 200){
+        console.log(data.user);
+        console.log(data.message);
+      }
+      if(response.status === 404){
+        console.log(data.message);
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -26,10 +50,10 @@ const SignIn = () => {
           <p className="text-center mb-8">Sign-in to your account</p>
           <input
             type="text"
-            placeholder="Email or Phone Number"
+            placeholder="Email"
             className="w-full p-2 mb-4 border-2 border-gray-300 rounded"
-            value={emailOrPhone}
-            onChange={(e) => setEmailOrPhone(e.target.value)}
+            value={emailId}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="password"
@@ -57,7 +81,7 @@ const SignIn = () => {
           </div>
           <hr className="mb-6" />
           <div className="text-center">
-            <a href="#" className="text-blue-500">Create your RFID account</a>
+            <a href="/register" className="text-blue-500">Create your RFID account</a>
           </div>
         </form>
       </div>

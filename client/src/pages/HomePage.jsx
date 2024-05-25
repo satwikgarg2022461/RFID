@@ -209,22 +209,7 @@ const HomePage = () => {
             />
           </div>
           </div>
-      <div className="flex p-3 max-w-5xl mx-auto flex-col md:flex-row md:items-center gap-3">
-        <div className="flex flex-col items-center md:items-start md:flex-grow">
-          <h1 className="text-xl font-bold text-gray-800 dark:text-white md:text-5xl">
-            Start Your Journey
-          </h1>
-          <h2 className="text-lg text-gray-600 dark:text-gray-300 md:text-2xl">
-            adfadhsaukdsakjdsasa dsadsaddsdas dhjsdjhsadhjasdjsdjhsabdjhsds
-           
-          </h2>
-          <Link to={"/sign-up"}>
-            <Button className="mt-5" gradientDuoTone={"purpleToBlue"} pill>
-              Start Selling
-            </Button>
-          </Link>
-        </div>
-      </div>
+      
       </section>
       <FooterComponent></FooterComponent>
     </div>
