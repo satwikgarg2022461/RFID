@@ -12,7 +12,7 @@ const Dashboard = () => {
         <header className="header">
           <h1 className="heading">Overview</h1>
           <div className="search-bar">
-            <span className="material-symbols-outlined">search</span>
+            {/* <span className="material-symbols-outlined">search</span> */}
             <input type="text" placeholder="search" />
           </div>
         </header>

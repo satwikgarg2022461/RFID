@@ -9,6 +9,7 @@ import Inventory from './pages/Inventory'
 
 import WorkerLogin from './pages/WorkerSignIn'
 import Dashboard from './pages/Dashboard'
+import AddProductForm from './pages/AddProductForm'
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/contributors' element={<Contributors />} />
+        <Route path='/add-product' element={<AddProductForm />} />
         
 
       </Routes>
