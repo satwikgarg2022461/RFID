@@ -4,12 +4,16 @@ import HomePage from './pages/HomePage'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import Contributors from './pages/Contributors'
+<<<<<<< Updated upstream
 import RolePage from './pages/RolePage'
 import Inventory from './pages/Inventory'
 
 import WorkerLogin from './pages/WorkerSignIn'
 import Dashboard from './pages/Dashboard'
 
+=======
+import About from './pages/About'
+>>>>>>> Stashed changes
 
 const App = () => {
   return (
@@ -24,8 +28,12 @@ const App = () => {
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/contributors' element={<Contributors />} />
+<<<<<<< Updated upstream
         
 
+=======
+        <Route path='/about' element={< About />} /> 
+>>>>>>> Stashed changes
       </Routes>
       {/* <FooterComponent /> */}
     </BrowserRouter>
