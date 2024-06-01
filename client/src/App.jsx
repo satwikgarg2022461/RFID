@@ -10,7 +10,7 @@ import Inventory from './pages/Inventory'
 import WorkerLogin from './pages/WorkerSignIn'
 import Dashboard from './pages/Dashboard'
 import AddProductForm from './pages/AddProductForm'
-
+import About from './pages/About'
 
 const App = () => {
   return (
@@ -25,9 +25,12 @@ const App = () => {
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/contributors' element={<Contributors />} />
+
         <Route path='/add-product' element={<AddProductForm />} />
+
         
 
+        <Route path='/about' element={< About />} /> 
       </Routes>
       {/* <FooterComponent /> */}
     </BrowserRouter>
