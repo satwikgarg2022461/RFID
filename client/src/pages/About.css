@@ -1,70 +1,32 @@
-/* about.css */
+.about-container {
+  background-color: #007bff;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  overflow: auto;
+}
 
-/* Styling for the "Why Queue?" section */
-#why-queue {
-    background-color: blue;
-    padding: 50px;
-    color: white;
-    width: 100%;
-    height : 100%; /* Make the section fill the entire width */
-    box-sizing: border-box; /* Include padding and border in the width */
-  }
-  
-  #why-queue h2 {
-    font-size: 100px; /* Increase the font size */
-    font-weight: bold; /* Make the text bold */
-    color: white; /* Change the text color */
-    font-family: Arial, sans-serif; /* Change the font */
-  }
-  
-  #why-queue p {
-    font-size: 20px; /* Increase the font size */
-    color: white; /* Change the text color */
-    font-family: Arial, sans-serif; /* Change the font */
-  }
-  
-  #why-queue img {
-    max-width: 80%;
-    height: auto;
-  }
-  
-  /* Add the following CSS for the animations */
-  
-  @keyframes slide-in {
-    0% {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  .slide-in {
-    animation: slide-in 2s ease-out forwards;
-  }
+.about-card {
+  background-color: white;
+  color: black;
+  margin-bottom: 20px;
+  padding: 20px;
+}
 
-  /* about.css */
+.description{
+  font-size: 1.0em;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+  margin-bottom: 20px;
 
-/* Styling for the "Why RFID?" section */
-#why-rfid {
-    background-color: white; /* Change the background color */
-    padding: 50px;
-    color: black; /* Change the text color */
-    width: 100%;
-    height : 77.73vh;
-    box-sizing: border-box;
-  }
-  
-  #why-rfid h2 {
-    font-size: 100px;
-    font-weight: bold;
-    color: black; /* Change the text color */
-    font-family: Arial, sans-serif;
-  }
-  
-  #why-rfid img {
-    max-width: 100%;
-    height: auto;
-  }
+}
+
+.title {
+  background-color: #013699;
+  font-weight : bold;  
+  color: white;
+  font-size: 1.5em;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+  margin-bottom: 20px;
+}
