@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import './AddProductForm.css';
+import Sidebar from './../components/Sidebar';
 
 const AddProductForm = () => {
     const [productName, setProductName] = useState('');
     const [description, setDescription] = useState('');
-    const [category] = useState('Mens fashion');
+    const [category, setCategory] = useState('Mens fashion');
     const [subCategory, setSubCategory] = useState('T-shirt');
     const [style, setStyle] = useState('Short Sleeve');
     const [brandName, setBrandName] = useState('');
     const [rfid, setRfid] = useState('');
-    const [country, setCountry] = useState('India');
-    const [stockAmount, setStockAmount] = useState(2000);
-    const [price, setPrice] = useState(50);
+    const [barcode] = useState('');
+    const [stockAmount, setStockAmount] = useState(0);
+    const [price, setPrice] = useState(0);
     const [currency, setCurrency] = useState('USD');
     const [images, setImages] = useState([null, null, null]);
 
@@ -22,36 +23,43 @@ const AddProductForm = () => {
     };
 
     return (
+        <div className="dashboard-container">
+        <Sidebar></Sidebar>
         <div className="form-container">
-            <h2>Add Product</h2>
+            <h1>Add Product</h1>
+            
             <form>
                 <div className="form-sections">
                     <div className="left-section">
-                        <div>
+                        <div className='Product-name-div'>
                             <label>Product name</label>
                             <input 
                                 type="text" 
                                 value={productName}
                                 onChange={(e) => setProductName(e.target.value)} 
+                                placeholder='Enter product name'
                             />
                         </div>
-                        <div>
+                        <div className='description-div'>
                             <label>Description</label>
                             <textarea 
                                 value={description}
                                 onChange={(e) => setDescription(e.target.value)}
+                                placeholder='Enter product description'
                             />
                         </div>
-                        <div>
+                        <div className='category-div'>
                             <label>Category</label>
-                            <input 
-                                type="text" 
+                            <select 
                                 value={category}
-                                readOnly
-                            />
+                                onChange={(e) => setCategory(e.target.value)}
+                            >
+                                <option value="Mens fashion">Men's fashion</option>
+                                {/* Add more options as needed */}
+                            </select>
                         </div>
                         <div className="side-by-side">
-                            <div>
+                            <div className='sub-category-div'>
                                 <label>Sub-Category</label>
                                 <select 
                                     value={subCategory}
@@ -61,7 +69,7 @@ const AddProductForm = () => {
                                     {/* Add more options as needed */}
                                 </select>
                             </div>
-                            <div>
+                            <div className='style-div'>
                                 <label>Style</label>
                                 <select 
                                     value={style}
@@ -72,34 +80,35 @@ const AddProductForm = () => {
                                 </select>
                             </div>
                         </div>
-                        <div>
+                        <div className='brand-div'>
                             <label>Brand name</label>
                             <input 
                                 type="text" 
                                 value={brandName}
                                 onChange={(e) => setBrandName(e.target.value)}
+                                placeholder='Enter brand name'
                             />
                         </div>
                         <div className="side-by-side">
-                            <div>
+                            <div className='rfid-div'>
                                 <label>RFID no.</label>
                                 <input 
                                     type="text" 
                                     value={rfid}
                                     onChange={(e) => setRfid(e.target.value)}
+                                    placeholder='Enter RFID no.'
                                 />
                             </div>
-                            <div>
-                                <label>Country of origin</label>
-                                <select 
-                                    value={country}
-                                    onChange={(e) => setCountry(e.target.value)}
-                                >
-                                    <option value="India">India</option>
-                                    {/* Add more options as needed */}
-                                </select>
+                            <div className='barcode-div'>
+                                <label>Barcode</label>
+                                <input 
+                                    type="text" 
+                                    value={barcode}
+                                    onChange={(e) => setRfid(e.target.value)}
+                                    placeholder='Enter barcode'
+                                />
                             </div>
-                            <div>
+                            <div className='stock-div'>
                                 <label>Stock amount</label>
                                 <input 
                                     type="number" 
@@ -119,27 +128,22 @@ const AddProductForm = () => {
                             {/* <button type="button">Add Image</button> */}
                         </div>
                         <div className="price-container">
+                            <label>Price:</label>
                             <input 
                                 type="number" 
                                 value={price}
                                 onChange={(e) => setPrice(e.target.value)}
                             />
-                            <select 
-                                value={currency}
-                                onChange={(e) => setCurrency(e.target.value)}
-                            >
-                                <option value="USD">USD</option>
-                                {/* Add more options as needed */}
-                            </select>
                         </div>
                     </div>
                 </div>
                 <div className="buttons-container">
-                    <button type="button">Back</button>
+                    <button type="button">Cancel</button>
                     <button type="submit">Continue</button>
                 </div>
             </form>
         </div>
+    </div>
     );
 };
 

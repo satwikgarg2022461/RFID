@@ -1,13 +1,14 @@
 .form-container {
-    max-width: 1000px;
+    max-width: 1350px;
+    width: 100%;
     margin: auto;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 8px;
     background-color: #f9f9f9;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h2 {
@@ -58,7 +59,7 @@ textarea {
     width: calc(100% - 22px);
     padding: 10px;
     /* margin-bottom: 10px; */
-    border: 1px solid #ccc;
+    border: 4px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -66,6 +67,7 @@ textarea {
 textarea {
     height: 100px;
 }
+
 
 .side-by-side {
     display: flex;
@@ -94,10 +96,11 @@ textarea {
     display: flex;
     align-items: center;
     gap: 10px;
+    
 }
 
 .price-container input[type="number"] {
-    width: 70px;
+    width: 100px;
     text-align: right;
 }
 
@@ -106,11 +109,16 @@ textarea {
     margin-left: -10px;
 }
 
+.price-container select {
+    width: auto;
+    border-radius: 8px;
+}
+
 .buttons-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 button {
@@ -120,6 +128,7 @@ button {
     border-radius: 4px;
     cursor: pointer;
     width: 150px;
+    height: 40px;
 }
 
 button[type="button"] {
@@ -127,10 +136,55 @@ button[type="button"] {
 }
 
 button[type="submit"] {
-    background-color: #007bff;
-    color: white;
+    background-color: #C2DFFF;
+    color: #013699;
 }
+
+
 
 button:hover {
     opacity: 0.8;
 }
+
+.product-name-div input[type="text"] {
+    border-radius: 4px;
+}
+
+.description-div textarea{
+    border-radius: 4px;
+}
+
+.category-div select {
+    border-radius: 4px;
+}
+
+.sub-category-div select {
+    border-radius: 4px;
+}
+
+.style-div select {
+    border-radius: 4px;
+}
+
+.brand-div select {
+    border-radius: 4px;
+}
+
+.rfid-div input[type="text"] {
+    border-radius: 4px;
+}
+
+.barcodes-div input[type="text"] {
+    border-radius: 4px;
+}
+
+.stock-div input[type="number"] {
+    border-radius: 4px;
+}
+
+.price-div input[type="number"] {
+    border-radius: 4px;
+}
+
+
+

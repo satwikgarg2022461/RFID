@@ -114,10 +114,12 @@ export const loginController = async (req, res) => {
       success: true,
       message: "Login Successfully",
       user: {
-        nam: user.name,
-        email: user.email,
-        phone: user.phone,
+        id: user._id,
+        name: user.fullName,
+        email: user.emailId,
+        phone: user.contactNumber,
         address: user.address,
+        role: user.role, // Include the user role in the response
       },
       token,
     });

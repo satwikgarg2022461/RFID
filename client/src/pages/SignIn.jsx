@@ -28,6 +28,13 @@ const SignIn = () => {
       if(response.status === 200){
         console.log(data.user);
         console.log(data.message);
+        localStorage.setItem('user', JSON.stringify(data.user));
+        localStorage.setItem('token', data.token);
+
+        // Navigate to the respective dashboard based on user role
+        if(data.user.role === 1){
+          navigate(`/seller/dashboard`);
+        }
       }
       if(response.status === 404){
         console.log(data.message);
