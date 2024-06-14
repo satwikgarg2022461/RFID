@@ -1,0 +1,17 @@
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-wrapper input {
+    flex: 1;
+    padding-right: 2.5rem; /* Add space for the icon */
+  }
+  
+  .search-wrapper .search-icon {
+    position: absolute;
+    right: 0.5rem; /* Adjust to position the icon properly */
+    pointer-events: none; /* Prevent the icon from blocking clicks to the input */
+  }
+  
