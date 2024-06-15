@@ -8,12 +8,12 @@ import RolePage from './pages/RolePage'
 import Inventory from './pages/Inventory'
 
 import WorkerLogin from './pages/WorkerSignIn'
-import Dashboard from './pages/Dashboard'
+import Dashboard from './pages/dashboard'
 import AddProductForm from './pages/AddProductForm'
 import About from './pages/About'
 import BillingPage from './pages/BillingPage'
 import WorkerDashboard from './pages/WorkerDashboard'
-
+import PastTransaction from './pages/past_transaction';
 const App = () => {
   return (
     <BrowserRouter>
@@ -26,7 +26,8 @@ const App = () => {
         <Route path='/worker/sign-in' element={<WorkerLogin />} />
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/seller/dashboard' element={<Dashboard />} />
-        <Route path='/worker/dashboard' element={<WorkerDashboard />} />
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/seller/past_transaction" element={<PastTransaction />} />        <Route path='/worker/dashboard' element={<WorkerDashboard />} />
         <Route path='/contributors' element={<Contributors />} />
         <Route path='/seller/add-product' element={<AddProductForm />} />
         <Route path='/about' element={< About />} /> 
