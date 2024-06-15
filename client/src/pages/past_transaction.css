@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  .Sidebar {
+    background-color: black;
+    width: 100px; /* Adjust as needed */
+    float: left;
+  }
+  .box {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .heading{
+    color:  #013699;
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    /* background-color : yellow; */
+    width: 100vh;
+    height : 100vh;
+    margin: auto;
+    align-items: left   ;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+   /* // align-items: right; */
+    padding: 10px 0;
+  }
+  
+  .back-button {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .icons {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .icons button {
+    align-items: right;
+    background: none;
+    border: none;
+    font-size: 20px;
+    margin-right: 5px; /* Reduced from 10px to 5px */
+    cursor: pointer;
+  }
+  
+  .summary {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  
+  .summary div {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 48%;
+  }
+  
+  .transaction-list {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .transaction-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .search {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .date-picker {
+    padding: 8px;
+    border: 1px
+  }  
+  table {
+  width: 100%;
+  table-layout: fixed;
+}
+.full-width-table th {
+    color: blue;
+  }
+  .total-orders, .total-revenue {
+    display: flex;
+    align-items: center;
+  }
+  
+  .total-orders::before {
+    content: "\1F4B0"; /* Unicode for a money bag */
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .total-revenue::before {
+    content: "\1F4B8"; /* Unicode for a chart with upwards trend and yen sign */
+    font-size: 20px;
+    margin-right: 10px;
+  }

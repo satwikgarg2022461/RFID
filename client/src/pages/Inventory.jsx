@@ -2,6 +2,8 @@ import React from 'react';
 import { Navbar } from 'flowbite-react';
 import { Link } from 'react-router-dom';
 import { Button } from 'flowbite-react';
+import "./inventory.css";
+import Sidebar from "./../components/Sidebar";
 
 const Inventory = () => {
   const items = [
@@ -11,43 +13,14 @@ const Inventory = () => {
   ];
 
   return (
+    <div className="container">
+      <div>
+        <Sidebar />
+      </div>
     <div className="min-h-screen bg-white">
       {/* Centered Navigation */}
-      <Navbar className='border-b-2'>
-      <div className='flex items-center justify-between w-full'>
-        <Link
-          to="/"
-          className="self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white"
-        >
-          <span className="text-blue-500">Company</span>
-          <span className="text-gray-900">Logo</span>
-        </Link>
-        <div className="flex"> {/* Flex container for buttons */}
-          {/* Start Selling Button */}
-          <Link to={"/sign-up"}>
-            <Button gradientDuoTone={"purpleToBlue"} pill outline>
-              Dashboard
-            </Button>
-          </Link>
-          <Link to={"/sign-up"}>
-            <Button gradientDuoTone={"purpleToBlue"} pill outline>
-              Track Order
-            </Button>
-          </Link>
-          <Link to={"/sign-up"}>
-            <Button gradientDuoTone={"purpleToBlue"} pill outline>
-              Shipment
-            </Button>
-          </Link>
-          {/* Login Button */}
-          <Link to={"/sign-in"} className="ml-4">
-            <Button gradientDuoTone={"greenToBlue"} pill outline>
-              Login
-            </Button>
-          </Link>
-        </div>
-      </div>
-    </Navbar>
+      <div className = "inventory-heading"> <h1>Inventory</h1></div>
+     
 
       {/* Table */}
       <div className="p-8 overflow-x-auto">
@@ -94,6 +67,7 @@ const Inventory = () => {
           <a href="#next" className="mx-1 px-3 py-1 border border-gray-300 text-gray-700 hover:bg-gray-200">Next &gt;</a>
         </div>
       </div>
+    </div>
     </div>
   );
 };
